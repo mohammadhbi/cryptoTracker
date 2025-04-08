@@ -4,7 +4,8 @@ export default function Home() {
   return (
 <div>
   <h1>
-    hello
+    hello 
+
   </h1>
   <Landing/>
 </div>
