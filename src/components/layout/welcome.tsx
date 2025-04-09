@@ -10,8 +10,7 @@ function Landing() {
           <div className="md:hidden mb-6">
             <div className="flex items-center space-x-4">
               <img
-                src="https://static-app.bb-os.com/avatar/20230901/avatar_3.png"
-                alt="Avatar"
+               
                 className="w-12 h-12 rounded-full"
               />
               <div className="bg-gray-800 p-3 rounded-lg shadow-md">
@@ -25,7 +24,7 @@ function Landing() {
           {/* Main Content */}
           <div className="relative font-inter">
             <img
-              src="https://bin.bb-os.com/accounts_nuxt/loading-ske-pc-light.8453de22.jpg"
+              
               alt="Background"
               className="absolute inset-0 w-full h-full object-cover rounded-xl opacity-10"
             />
@@ -35,7 +34,7 @@ function Landing() {
                 <div className="flex items-center space-x-4 justify-center">
                   <div className="flex items-center space-x-3">
                     <img
-                      src="https://static-app.bb-os.com/avatar/20230901/avatar_3.png"
+                      src=""
                       alt="Avatar"
                       className="w-16 h-16 rounded-full"
                     />
@@ -59,9 +58,7 @@ function Landing() {
                 </div>
                 <ul className="flex flex-wrap justify-center gap-6">
                   {[
-                    { img: "https://static-app.bb-os.com/fe-common/assets/imgs/register-reward1.svg", amount: "30 USDT", detail: "Max Sign-up Reward" },
-                    { img: "https://static-app.bb-os.com/fe-common/assets/imgs/register-reward2.svg", amount: "500 USDT", detail: "Max Deposit Reward" },
-                    { img: "https://static-app.bb-os.com/fe-common/assets/imgs/register-reward3.svg", amount: "500 USDT", detail: "Max Trade Reward" },
+                   
                   ].map((reward, index) => (
                     <li
                       key={index}
@@ -98,17 +95,17 @@ function Landing() {
               <div className="space-y-6 mb-8">
                 {[
                   {
-                    img: "https://bin.bb-os.com/accounts_nuxt/security3.22a3bf38.svg",
+                    img: "",
                     info: "Awards and Achievements",
                     detail: "Best Crypto Broker/Exchange 2021-2023 by TradingView. 100% fund reserves for security.",
                   },
                   {
-                    img: "https://bin.bb-os.com/accounts_nuxt/security1.509ee313.svg",
+                    img: "",
                     info: "Remarkable User Service",
                     detail: "24/7 support with <1 min response time. VIPs get dedicated account managers.",
                   },
                   {
-                    img: "https://bin.bb-os.com/accounts_nuxt/security4.398393f6.svg",
+                    img: "",
                     info: "Elite Traders",
                     detail: "Perpetual Futures, leverage, and spot trading. Copy top traders effortlessly.",
                   },
@@ -127,14 +124,14 @@ function Landing() {
               <div className="bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-center justify-between">
                 <div className="text-center md:text-left">
                   <img
-                    src="https://static-app.bb-os.com/fe-common/assets/imgs/ship-logo.png"
+                    src=""
                     alt="Chelsea FC Logo"
                     className="w-20 mx-auto md:mx-0 mb-2"
                   />
                   <p className="font-semibold">OFFICIAL CRYPTO EXCHANGE PARTNER OF CHELSEA FC</p>
                 </div>
                 <img
-                  src="https://static-app.bb-os.com/fe-common/assets/imgs/home-ship.jpg"
+                  src=""
                   alt="Chelsea FC"
                   className="w-full md:w-1/2 rounded-lg mt-4 md:mt-0"
                 />
