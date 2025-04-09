@@ -1,4 +1,3 @@
-
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useForm } from "react-hook-form";
@@ -10,7 +9,7 @@ const schema = yup.object({
   password: yup.string().required("Password is required").min(6, "Minimum 6 characters").max(12, "Maximum 12 characters"),
 }).required();
 
-function SignUp() {
+function Login() {
   const { register, handleSubmit, formState: { errors }, setError } = useForm({
     resolver: yupResolver(schema),
   });
@@ -18,15 +17,15 @@ function SignUp() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:3000/signup", data);
+      const response = await axios.post("http://localhost:3000/login", data); 
       console.log(response.data.message);
-      navigate("/coins");
+      navigate("/coins"); 
     } catch (error) {
       console.error("🟥 Error:", error);
       console.error("📦 Response:", error.response);
       setError("submit", {
         type: "server",
-        message: error.response?.data?.message || "Something went wrong!",
+        message: error.response?.data?.message || "Login failed! Check your credentials.",
       });
     }
   };
@@ -36,7 +35,7 @@ function SignUp() {
       <div className="w-full max-w-md bg-gray-900/80 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-gray-700/50">
         {/* Title with gradient */}
         <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-          Join Xchange
+          Log In to Xchange
         </h2>
 
         {/* Form */}
@@ -72,7 +71,7 @@ function SignUp() {
             type="submit"
             className="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg hover:from-cyan-600 hover:to-purple-700 transform hover:scale-105 transition-all duration-300"
           >
-            Sign Up
+            Log In
           </button>
 
           {/* Server Error */}
@@ -83,10 +82,10 @@ function SignUp() {
           )}
         </form>
 
-        {/* Login Link */}
+        {/* Sign Up Link */}
         <div className="mt-6 text-center text-gray-400">
-          <span>Already have an account? </span>
-          <a href="/login" className="text-cyan-400 hover:underline">Log In</a>
+          <span>Don’t have an account? </span>
+          <a href="/signup" className="text-cyan-400 hover:underline">Sign Up</a>
         </div>
 
         {/* Divider and Third-Party Options */}
@@ -115,4 +114,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Login;
